@@ -1,8 +1,0 @@
-[ {
-  "name" : "Inventory Watch List",
-  "description" : "Replicates the functionality of the Monitor Module, but adds the option to display it on your dashboard. Watches must be created in the Monitor Module.",
-  "data" : "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/r-2.2.3/sc-2.0.1/datatables.min.css\"/>\r\n \r\n<script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js\"></script>\r\n<script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js\"></script>\r\n<script type=\"text/javascript\" src=\"https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/r-2.2.3/sc-2.0.1/datatables.min.js\"></script>\r\n<style type=\"text/css\"> {% Style Inventory_Watch_List %} </style>",
-  "active" : true,
-  "note" : "",
-  "type" : "Template"
-} ]
