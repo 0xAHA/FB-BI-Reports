@@ -1,8 +1,0 @@
-[ {
-  "name" : "Print Landscape",
-  "description" : "Default landscape print settings.",
-  "data" : "@media print {\r\n    html,body {\r\n        height: 100%;\r\n        width: 100%;\r\n        margin: 0;\r\n        padding: 0;\r\n        overflow: hidden;\r\n    }\r\n    \r\n    #button {\r\n        display: none !important;\r\n    }\r\n    \r\n    @page {\r\n        $PRINT{Print|Letter:landscape|Print}\r\n    }\r\n}",
-  "active" : true,
-  "note" : "",
-  "type" : "Style"
-} ]
