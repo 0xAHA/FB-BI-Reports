@@ -32,7 +32,7 @@ Before installing the combined dashboard, create the following properties in **S
 | `BI_PO_SHOW_BID_REQUEST` | `false` | Show/hide bid request purchase orders |
 | `DateFormatShort` | `dd/MM/yyyy` | Date display format used throughout dashboard |
 
-**IMPORTANT**: The `FBDASH_LAYOUT` property is critical for dashboard functionality. See the Configuration section below for detailed layout syntax.
+**IMPORTANT**: The `BI_DASHBOARD_LAYOUT` property is critical for dashboard functionality. See the Configuration section below for detailed layout syntax.
 
 ### Installation Steps
 
@@ -62,15 +62,15 @@ Before installing the combined dashboard, create the following properties in **S
 5. **Access Dashboard**
    - The combined dashboard will now be available as a Dashboard Gadget in the BI Report list
    - Add it to your Fishbowl dashboard for quick access
-   - The dashboard will load with your configured layout from the `FBDASH_LAYOUT` property
+   - The dashboard will load with your configured layout from the `BI_DASHBOARD_LAYOUT` property
 
 ## Configuration
 
 The combined dashboard is configured entirely through Fishbowl custom properties in **Setup > Property**. This allows you to change the layout and behavior without modifying the report file.
 
-### Layout Configuration (FBDASH_LAYOUT)
+### Layout Configuration (BI_DASHBOARD_LAYOUT)
 
-The `FBDASH_LAYOUT` property controls which tiles are displayed and how they are arranged. The format is:
+The `BI_DASHBOARD_LAYOUT` property controls which tiles are displayed and how they are arranged. The format is:
 
 ```
 {columns}-{tile1}-{tile2}-{tile3}-...
@@ -332,7 +332,7 @@ Tiles display color-coded status badges for quick visual identification:
 1. **Start with Default Layout**: Use `2-SO-PO-WO-RMA-TO-PICK-RCV-SHIP` to see all tiles
 2. **Adjust Row Count**: Set `FBDASH_ROWS` based on your screen resolution (5-10 recommended)
 3. **Enable Auto-Refresh**: Set `FBDASH_REFRESH_INTERVAL` to 300 (5 minutes) for regular updates
-4. **Customize Layout**: Remove unused tiles from `FBDASH_LAYOUT` to focus on relevant data
+4. **Customize Layout**: Remove unused tiles from `BI_DASHBOARD_LAYOUT` to focus on relevant data
 
 ### Optimizing for Different Screen Sizes
 
@@ -542,7 +542,7 @@ All Fishbowl custom properties used by the combined dashboard:
 - Short auto-refresh interval
 
 **Solutions**:
-1. Reduce number of tiles in `FBDASH_LAYOUT`
+1. Reduce number of tiles in `BI_DASHBOARD_LAYOUT`
 2. Increase `BI_DASHBOARD_ROWS` to reduce number of tiles visible
 3. Increase `BI_DASHBOARD_REFRESH` to reduce query frequency
 4. Use filters to reduce data volume
@@ -562,7 +562,7 @@ If you're currently using the individual dashboard reports (Open Sales Orders, O
 ### Migration Steps
 
 1. **Install Combined Dashboard**: Follow the Installation section above
-2. **Configure Layout**: Set `FBDASH_LAYOUT` to display desired tiles
+2. **Configure Layout**: Set `BI_DASHBOARD_LAYOUT` to display desired tiles
 3. **Test Functionality**: Verify all tiles load correctly and show expected data
 4. **Train Users**: Familiarize users with the new combined interface
 5. **Decommission Individual Reports**: Remove individual dashboard gadgets once combined dashboard is adopted
