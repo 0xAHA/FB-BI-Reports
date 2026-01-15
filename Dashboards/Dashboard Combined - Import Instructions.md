@@ -24,9 +24,9 @@ Before installing the combined dashboard, create the following properties in **S
 
 | Property Name | Default Value | Purpose |
 |---------------|---------------|---------|
-| `FBDASH_LAYOUT` | `2-SO-PO-WO-RMA-TO-PICK-RCV-SHIP` | Dashboard layout configuration (see Configuration section) |
-| `FBDASH_ROWS` | `5` | Number of data rows to display per tile |
-| `FBDASH_REFRESH_INTERVAL` | `300` | Auto-refresh interval in seconds (0 = disabled) |
+| `BI_DASHBOARD_LAYOUT` | `2-SO-PO-WO-RMA-TO-PICK-RCV-SHIP` | Dashboard layout configuration (see Configuration section) |
+| `BI_DASHBOARD_ROWS` | `5` | Number of data rows to display per tile |
+| `BI_DASHBOARD_REFRESH` | `300` | Auto-refresh interval in seconds (0 = disabled) |
 | `BI_SHOW_DEBUG` | `false` | Enable/disable debug console for troubleshooting |
 | `BI_SO_SHOW_ESTIMATE` | `false` | Show/hide estimate-related sales order data |
 | `BI_PO_SHOW_BID_REQUEST` | `false` | Show/hide bid request purchase orders |
@@ -338,17 +338,17 @@ Tiles display color-coded status badges for quick visual identification:
 
 **Large Monitors (1920×1080 or higher)**:
 - Use 3-4 column layout
-- Set FBDASH_ROWS to 8-10
+- Set BI_DASHBOARD_ROWS to 8-10
 - Display all 8 tiles: `3-SO-PO-WO-RMA-TO-PICK-RCV-SHIP`
 
 **Standard Monitors (1366×768 to 1920×1080)**:
 - Use 2-3 column layout (default)
-- Set FBDASH_ROWS to 5-7
+- Set BI_DASHBOARD_ROWS to 5-7
 - Display priority tiles: `2-SO-PO-WO-PICK-SHIP`
 
 **Smaller Screens (below 1366×768)**:
 - Use 1-2 column layout
-- Set FBDASH_ROWS to 5
+- Set BI_DASHBOARD_ROWS to 5
 - Display essential tiles only: `1-SO-PO-PICK`
 
 ### Finding Overdue Items
@@ -470,9 +470,9 @@ All Fishbowl custom properties used by the combined dashboard:
 
 | Property | Type | Default | Module | Description |
 |----------|------|---------|--------|-------------|
-| `FBDASH_LAYOUT` | String | `2-SO-PO-WO-RMA-TO-PICK-RCV-SHIP` | Main | Dashboard layout configuration |
-| `FBDASH_ROWS` | Integer | `5` | Main | Number of rows per tile |
-| `FBDASH_REFRESH_INTERVAL` | Integer | `300` | Main | Auto-refresh interval (seconds) |
+| `BI_DASHBOARD_LAYOUT` | String | `2-SO-PO-WO-RMA-TO-PICK-RCV-SHIP` | Main | Dashboard layout configuration |
+| `BI_DASHBOARD_ROWS` | Integer | `5` | Main | Number of rows per tile |
+| `BI_DASHBOARD_REFRESH` | Integer | `300` | Main | Auto-refresh interval (seconds) |
 | `DateFormatShort` | String | `dd/MM/yyyy` | All | Date display format |
 | `BI_SHOW_DEBUG` | Boolean | `false` | All | Enable debug console |
 | `BI_SO_SHOW_ESTIMATE` | Boolean | `false` | SO | Show/hide estimates |
@@ -484,12 +484,12 @@ All Fishbowl custom properties used by the combined dashboard:
 
 **Symptom**: Dashboard shows blank screen or loading message
 **Causes**:
-- Missing `FBDASH_LAYOUT` property
-- Invalid layout syntax in `FBDASH_LAYOUT`
+- Missing `BI_DASHBOARD_LAYOUT` property
+- Invalid layout syntax in `BI_DASHBOARD_LAYOUT`
 - JxBrowser compatibility issue
 
 **Solutions**:
-1. Verify `FBDASH_LAYOUT` exists in Setup > Property
+1. Verify `BI_DASHBOARD_LAYOUT` exists in Setup > Property
 2. Check layout syntax: `{columns}-{tile1}-{tile2}...`
 3. Try default layout: `2-SO-PO-WO-RMA-TO-PICK-RCV-SHIP`
 4. Enable debug mode: set `BI_SHOW_DEBUG = true`
@@ -500,7 +500,7 @@ All Fishbowl custom properties used by the combined dashboard:
 **Causes**:
 - Missing location group assignment for user
 - SQL query error
-- Missing tile code in `FBDASH_LAYOUT`
+- Missing tile code in `BI_DASHBOARD_LAYOUT`
 
 **Solutions**:
 1. Verify user is assigned to location groups in Fishbowl
@@ -511,12 +511,12 @@ All Fishbowl custom properties used by the combined dashboard:
 
 **Symptom**: Dashboard does not refresh automatically
 **Causes**:
-- `FBDASH_REFRESH_INTERVAL` set to 0
+- `BI_DASHBOARD_REFRESH` set to 0
 - Invalid interval value
 - Browser timeout restriction
 
 **Solutions**:
-1. Set `FBDASH_REFRESH_INTERVAL` to non-zero value (e.g., 300)
+1. Set `BI_DASHBOARD_REFRESH` to non-zero value (e.g., 300)
 2. Use reasonable interval (60-600 seconds recommended)
 3. Manually refresh using tile refresh buttons
 
@@ -543,8 +543,8 @@ All Fishbowl custom properties used by the combined dashboard:
 
 **Solutions**:
 1. Reduce number of tiles in `FBDASH_LAYOUT`
-2. Increase `FBDASH_ROWS` to reduce number of tiles visible
-3. Increase `FBDASH_REFRESH_INTERVAL` to reduce query frequency
+2. Increase `BI_DASHBOARD_ROWS` to reduce number of tiles visible
+3. Increase `BI_DASHBOARD_REFRESH` to reduce query frequency
 4. Use filters to reduce data volume
 
 ## Migration from Individual Reports
