@@ -22,7 +22,6 @@ The themes must be installed **first** before importing any reports, as the repo
 1. In Fishbowl, open **Reporting > BI Editor** menu
 2. Click **Import**
 3. Select the theme file (`.json` format):
-   - `fishbowl-theme.css`
    - `fishbowl-theme-modern.css`
 4. Ensure that you tick the **"Publish"** checkbox
 5. Select appropriate **None/View/Edit** settings for each User Group
@@ -53,52 +52,13 @@ To open a report:
 
 ---
 
-## Report Index
-
-| Report File | Report Name | Purpose |
-|-------------|-------------|---------|
-| `Assembly_Disassembly_Helper.htm` | Assembly Disassembly Helper | Automates disassembly of sub-assemblies and reassembly into finished products using JSON configuration |
-| `Cycle_Count_Helper.htm` | Cycle Count Helper | Prepares cycle count inventory adjustments with CSV export |
-| `Default_Parts_Updater.htm` | Default Parts Location Manager | Manages and updates default locations for parts in bulk |
-| `Inv_Reorder_Watchlist.htm` | Inventory Reorder Monitor | Monitors inventory levels and reorder points with visual status indicators |
-| `Inventory_Adjustment_Helper.htm` | Inventory Adjustment Helper | Prepares complex inventory adjustments with IN/OUT tracking and cost balancing |
-| `Inventory_Availability_by_Location_Group.htm` | Inventory Availability by Location Group | Displays inventory availability organized by location groups |
-| `PPP_Pricing_Validator.htm` | Part, Product & Vendor Pricing Validator | Validates pricing data from Excel/CSV imports |
-
----
-
 ## Themes
-
-### fishbowl-theme.css
-
-Classic Fishbowl theme with official Fishbowl branding colors (#2D9CDB).
-
-**Used by:** Inventory Reorder Monitor, Inventory Availability by Location Group, Assembly Disassembly Helper, Cycle Count Helper, Inventory Adjustment Helper
 
 ### fishbowl-theme-modern.css
 
 Modern Bootstrap 5-based theme with enhanced UI components and responsive design.
 
 **Used by:** PPP Pricing Validator, Default Parts Updater
-
----
-
-## Additional Resources
-
-### Assembly Disassembly Helper Configuration
-
-The Assembly Disassembly Helper uses a JSON configuration file. See [README_Assembly_JSON.md](README_Assembly_JSON.md) for detailed documentation on:
-- JSON structure and field descriptions
-- Example configurations
-- Workflow and usage instructions
-
-**JSON File Location:** `C:\Program Files\Fishbowl\server\reports\Custom\Assembly.json`
-
-### Example Files
-
-- **assembly_disassembly_example.json** - Example JSON configuration template
-- **theme-demo.html** - Demo of classic theme styles and components
-- **theme-demo-modern.html** - Demo of modern theme styles and components
 
 ---
 
